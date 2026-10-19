@@ -41,3 +41,37 @@
 @media(max-width:600px){.intro h1{font-size:36px;letter-spacing:-1.5px}.atlas-shell .map-section{padding:12px}.atlas-stage{height:440px}.atlas-shell .map-toolbar{gap:12px;margin-bottom:12px}.atlas-shell .map-toolbar p{max-width:none;font-size:9px}.atlas-toolbar-actions{gap:13px}.atlas-mode-link{font-size:10px}.atlas-stamp{left:11px;top:11px;font-size:8px}.atlas-stamp b{font-size:10px}.atlas-help{left:11px;bottom:13px;right:95px;font-size:8px}.atlas-zoom{bottom:11px;right:10px}.atlas-zoom button{width:30px;height:30px}.atlas-node{font-size:9px;max-width:155px;min-height:28px;padding-right:6px}.atlas-topics{gap:6px}.atlas-topics button{font-size:9px;padding:8px}.atlas-find{gap:8px}.atlas-find label{width:100%}.atlas-find select{max-width:none}.atlas-count{width:100%;margin:4px 0 0}.atlas-legacy{font-size:10px}.atlas-shell .legend{font-size:9px;gap:10px}}
 @media(prefers-reduced-motion:reduce){.atlas-node{transition:none}}
 @media print{.atlas-shell{display:none}.atlas-legacy{display:block}}
+
+/* A quiet graph workspace, inspired by Obsidian's Graph View. */
+.atlas-shell{--ink:#e5e3eb;--muted:#aaa6b4;--line:#38363f;--paper:#222126;--hover:#2e2938;--panel:#25232b;--course:#b396e5;--skill:#79bea7;--project:#dfb076;--experience:#8faddf;--green:#b8a0ec;--focus:#b8a0ec;background:var(--paper);border-color:var(--line);color:var(--ink)}
+.atlas-shell .map-section{background:#1e1d22}
+.atlas-shell .map-toolbar p{letter-spacing:.3px;text-transform:none;font:12px Arial,Helvetica,sans-serif;color:var(--ink)}
+.atlas-shell .inspector{background:#25232b;min-height:400px}
+.atlas-shell .inspector h2{font-size:23px;letter-spacing:-.6px}
+.atlas-shell .inspector .connection-list li{border-color:var(--line)}
+.atlas-shell .reset{color:var(--muted);border-radius:4px}
+.atlas-mode-link{color:#c3b2e6}
+.atlas-toolbar-actions{gap:13px;flex-wrap:wrap}
+.atlas-stage{background:#1b1a1f;border-color:#333138;border-radius:5px;height:570px}
+.atlas-stamp{color:#85818d;letter-spacing:.6px}
+.atlas-stamp b{color:#aaa6b4;font-size:10px}
+.atlas-node{color:#aaa6b4;font-size:11px;padding-left:13px}
+.atlas-node::before{display:none}
+.atlas-node.has-label{border-color:transparent;background:transparent;box-shadow:none;text-shadow:0 1px 5px #1b1a1f,0 -1px 5px #1b1a1f}
+.atlas-node.is-selected{color:#f1ecff;background:transparent;border-color:transparent;box-shadow:none}
+.atlas-node.is-dim{opacity:.17}
+.atlas-node:hover{color:#eee8fb}
+.atlas-help{font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:0;color:#8e8998}
+.atlas-zoom button{border-radius:4px;background:#28262e;color:#c9c3d4;border-color:#3c3945}
+.atlas-topics button{border-radius:4px;background:#25232b;font-family:Arial,Helvetica,sans-serif;font-size:11px}
+.atlas-topics button:hover,.atlas-topics button[aria-pressed=true]{border-color:#776094;background:#332b40;color:#eee7fa}
+.atlas-find select{border-radius:4px;background:#28262e;color:#d4ccdf}
+.atlas-search{border:1px solid var(--line);border-radius:4px;padding:7px 9px;background:#17161b;color:#e5e3eb;font:11px Arial,Helvetica,sans-serif;min-width:120px;width:180px;max-width:100%;flex:1}
+.atlas-search::placeholder{color:#8c8796}
+.atlas-search:focus-visible{outline:2px solid #b396e5;outline-offset:2px}
+.atlas-local{border:1px solid var(--line);background:#29262f;color:#c6becf;border-radius:4px;padding:7px 9px;font:10px Arial,Helvetica,sans-serif;cursor:pointer}
+.atlas-local[aria-pressed=true]{border-color:#9676c6;background:#3c304e;color:#ede2ff}
+.atlas-local:disabled{opacity:.35;cursor:default}
+@media(min-width:1500px){.atlas-stage{height:600px}}
+@media(max-width:1100px){.atlas-stage{height:550px}.atlas-shell .inspector{min-height:0}}
+@media(max-width:600px){.atlas-stage{height:390px}.atlas-shell .map-toolbar{gap:10px}.atlas-shell .map-toolbar p{font-size:11px}.atlas-search{width:130px}.atlas-toolbar-actions{width:100%;justify-content:space-between;gap:8px}.atlas-node{font-size:10px}.atlas-help{font-size:9px}.atlas-stamp{font-size:8px}.atlas-stamp b{font-size:9px}}
